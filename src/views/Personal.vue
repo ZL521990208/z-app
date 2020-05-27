@@ -1,22 +1,29 @@
 <template>
   <div>
-    这是个人页
+    <van-nav-bar title="个人信息" left-text="返回" right-text="按钮" left-arrow @click-left="onClickLeft" @click-right="onClickRight" />
   </div>
 </template>
 
 <script>
+import { Toast } from 'vant'
 export default {
-  name: 'Personal',
+  name: 'Information',
   data() {
     return {}
+  },
+  methods: {
+    onClickLeft() {
+      Toast('返回')
+    },
+    onClickRight() {
+      Toast('按钮')
+    }
   },
   components: {},
   created() {},
   mounted() {},
-  methods: {},
   computed: {}
 }
 </script>
 
-<style scoped lang="scss">
-</style>
+<style scoped lang="scss"></style>
